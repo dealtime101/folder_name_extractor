@@ -3,7 +3,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 save_folder = Path.home() / "Downloads"
 
@@ -23,14 +23,22 @@ def list_directories(path):
         print(f"The specified path ({path}) is not a directory.")
         return
 
-    directory_names = [name for name in os.listdir(path) if os.path.isdir(os.path.join(path, name))]
+    try:
+        directory_names = [name for name in os.listdir(path) if os.path.isdir(os.path.join(path, name))]
+    except OSError as error:
+        print(f"Could not read the folder ({path}): {error}")
+        return
 
-    save_folder.mkdir(parents=True, exist_ok=True)
     output_file_path = os.path.join(save_folder, "directory_names.txt")
 
-    with open(output_file_path, 'w') as file:
-        for directory in directory_names:
-            file.write(directory + '\n')
+    try:
+        save_folder.mkdir(parents=True, exist_ok=True)
+        with open(output_file_path, 'w') as file:
+            for directory in directory_names:
+                file.write(directory + '\n')
+    except OSError as error:
+        print(f"Could not write the output file ({output_file_path}): {error}")
+        return
 
     print(f"Folder names were saved in {output_file_path}")
     continue_prompt = input(f"Do you want to open the file? Y/N")

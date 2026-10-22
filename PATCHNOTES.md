@@ -1,5 +1,8 @@
 # Patch notes
 
+## 0.1.4 - 2026-10-22
+- Fix FOL517.5: an unreadable folder or an unwritable output location now shows a clear message instead of a raw traceback.
+
 ## 0.1.3 - 2026-10-22
 - Fix FOL517.2: answering Y now really opens the output file with the system's default application (Windows, macOS, Linux). If it can't be opened, a clear message is shown.
 
