@@ -3,7 +3,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 
 save_folder = Path.home() / "Downloads"
 
@@ -39,7 +39,7 @@ def list_directories(path):
 
     try:
         save_folder.mkdir(parents=True, exist_ok=True)
-        with open(output_file_path, 'w') as file:
+        with open(output_file_path, 'w', encoding='utf-8') as file:
             for directory in directory_names:
                 file.write(directory + '\n')
     except OSError as error:

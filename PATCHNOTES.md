@@ -1,5 +1,8 @@
 # Patch notes
 
+## 0.1.6 - 2026-10-22
+- Fix FOL517.4: the output file is written as UTF-8, so folder names with non-Latin characters or emoji no longer fail on Windows.
+
 ## 0.1.5 - 2026-10-22
 - Fix FOL517.6: if the output file already exists, the tool asks before replacing it. Any answer other than Y leaves the existing file untouched.
 
