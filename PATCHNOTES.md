@@ -1,5 +1,8 @@
 # Patch notes
 
+## 0.1.5 - 2026-10-22
+- Fix FOL517.6: if the output file already exists, the tool asks before replacing it. Any answer other than Y leaves the existing file untouched.
+
 ## 0.1.4 - 2026-10-22
 - Fix FOL517.5: an unreadable folder or an unwritable output location now shows a clear message instead of a raw traceback.
 

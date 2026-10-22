@@ -3,7 +3,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 
 save_folder = Path.home() / "Downloads"
 
@@ -30,6 +30,12 @@ def list_directories(path):
         return
 
     output_file_path = os.path.join(save_folder, "directory_names.txt")
+
+    if os.path.exists(output_file_path):
+        overwrite = input(f"{output_file_path} already exists. Overwrite it? Y/N ")
+        if overwrite.strip().lower() != "y":
+            print("Nothing was written.")
+            return
 
     try:
         save_folder.mkdir(parents=True, exist_ok=True)
