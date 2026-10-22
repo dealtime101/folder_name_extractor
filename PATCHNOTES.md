@@ -1,5 +1,8 @@
 # Patch notes
 
+## 0.1.9 - 2026-10-22
+- Fix FOL517.9: removed a redundant else/return at the end of the main function. No change in behavior.
+
 ## 0.1.8 - 2026-10-22
 - Fix FOL517.7: the "open the file?" prompt now ends with a space, so typing is no longer glued to the question.
 

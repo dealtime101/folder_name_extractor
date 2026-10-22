@@ -3,7 +3,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-__version__ = "0.1.8"
+__version__ = "0.1.9"
 
 save_folder = Path.home() / "Downloads"
 
@@ -54,8 +54,6 @@ def list_directories(path):
             open_file(output_file_path)
         except (OSError, subprocess.CalledProcessError) as error:
             print(f"Could not open the file automatically: {error}")
-    else:
-        return
 
 
 if __name__ == "__main__":
