@@ -58,4 +58,4 @@ Your Name - your-email@example.com
 
 Project Link: https://github.com/yourusername/directory-listing-tool
 
-Version: 0.1.2 (see PATCHNOTES.md)
+Version: 0.1.3 (see PATCHNOTES.md)
