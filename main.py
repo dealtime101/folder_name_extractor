@@ -1,6 +1,9 @@
 import os
+from pathlib import Path
 
-save_folder = os.path.join(os.environ['USERPROFILE'], 'Downloads')
+__version__ = "0.1.1"
+
+save_folder = Path.home() / "Downloads"
 
 
 def list_directories(path):
@@ -10,6 +13,7 @@ def list_directories(path):
 
     directory_names = [name for name in os.listdir(path) if os.path.isdir(os.path.join(path, name))]
 
+    save_folder.mkdir(parents=True, exist_ok=True)
     output_file_path = os.path.join(save_folder, "directory_names.txt")
 
     with open(output_file_path, 'w') as file:

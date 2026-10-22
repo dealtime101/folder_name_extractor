@@ -57,3 +57,5 @@ Contact
 Your Name - your-email@example.com
 
 Project Link: https://github.com/yourusername/directory-listing-tool
+
+Version: 0.1.1 (see PATCHNOTES.md)
