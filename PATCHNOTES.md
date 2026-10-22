@@ -1,5 +1,8 @@
 # Patch notes
 
+## 0.1.8 - 2026-10-22
+- Fix FOL517.7: the "open the file?" prompt now ends with a space, so typing is no longer glued to the question.
+
 ## 0.1.7 - 2026-10-22
 - Fix FOL517.8: folder names are written in alphabetical order, ignoring case.
 

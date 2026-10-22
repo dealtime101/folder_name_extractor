@@ -3,7 +3,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 
 save_folder = Path.home() / "Downloads"
 
@@ -47,7 +47,7 @@ def list_directories(path):
         return
 
     print(f"Folder names were saved in {output_file_path}")
-    continue_prompt = input(f"Do you want to open the file? Y/N")
+    continue_prompt = input("Do you want to open the file? (Y/N) ")
     if continue_prompt.strip().lower() == "y":
         print("Opening directory_names.txt")
         try:
