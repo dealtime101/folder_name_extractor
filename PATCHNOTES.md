@@ -1,5 +1,8 @@
 # Patch notes
 
+## 0.1.7 - 2026-10-22
+- Fix FOL517.8: folder names are written in alphabetical order, ignoring case.
+
 ## 0.1.6 - 2026-10-22
 - Fix FOL517.4: the output file is written as UTF-8, so folder names with non-Latin characters or emoji no longer fail on Windows.
 
